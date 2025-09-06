@@ -28,64 +28,86 @@
         /// </summary>
         private void InitializeComponent()
         {
-            BtnPlay = new Button();
-            BtnStop = new Button();
+            ButtonPlay = new Button();
             openFileDialog1 = new OpenFileDialog();
-            BtnOpenFile = new Button();
+            ButtonOpenFile = new Button();
+            progressBar1 = new ProgressBar();
+            labelCurrentTime = new Label();
+            labelTotalTime = new Label();
             SuspendLayout();
             // 
-            // BtnPlay
+            // ButtonPlay
             // 
-            BtnPlay.Location = new Point(200, 174);
-            BtnPlay.Name = "BtnPlay";
-            BtnPlay.Size = new Size(75, 23);
-            BtnPlay.TabIndex = 0;
-            BtnPlay.Text = "Play";
-            BtnPlay.UseVisualStyleBackColor = true;
-            BtnPlay.Click += BtnPlay_Click;
-            // 
-            // BtnStop
-            // 
-            BtnStop.Location = new Point(119, 174);
-            BtnStop.Name = "BtnStop";
-            BtnStop.Size = new Size(75, 23);
-            BtnStop.TabIndex = 1;
-            BtnStop.Text = "Stop";
-            BtnStop.UseVisualStyleBackColor = true;
-            BtnStop.Click += BtnStop_Click;
+            ButtonPlay.Location = new Point(401, 311);
+            ButtonPlay.Name = "ButtonPlay";
+            ButtonPlay.Size = new Size(156, 23);
+            ButtonPlay.TabIndex = 0;
+            ButtonPlay.Text = "Play";
+            ButtonPlay.UseVisualStyleBackColor = true;
+            ButtonPlay.Click += ButtonPlay_Click;
             // 
             // openFileDialog1
             // 
             openFileDialog1.FileName = "openFileDialog1";
             // 
-            // BtnOpenFile
+            // ButtonOpenFile
             // 
-            BtnOpenFile.Location = new Point(119, 203);
-            BtnOpenFile.Name = "BtnOpenFile";
-            BtnOpenFile.Size = new Size(156, 23);
-            BtnOpenFile.TabIndex = 2;
-            BtnOpenFile.Text = "Choose File";
-            BtnOpenFile.UseVisualStyleBackColor = true;
-            BtnOpenFile.Click += BtnOpenFile_Click;
+            ButtonOpenFile.Location = new Point(401, 340);
+            ButtonOpenFile.Name = "ButtonOpenFile";
+            ButtonOpenFile.Size = new Size(156, 23);
+            ButtonOpenFile.TabIndex = 2;
+            ButtonOpenFile.Text = "Choose File";
+            ButtonOpenFile.UseVisualStyleBackColor = true;
+            ButtonOpenFile.Click += ButtonOpenFile_Click;
+            // 
+            // progressBar1
+            // 
+            progressBar1.Location = new Point(12, 12);
+            progressBar1.Name = "progressBar1";
+            progressBar1.Size = new Size(545, 23);
+            progressBar1.TabIndex = 3;
+            // 
+            // labelCurrentTime
+            // 
+            labelCurrentTime.AutoSize = true;
+            labelCurrentTime.Location = new Point(12, 38);
+            labelCurrentTime.Name = "labelCurrentTime";
+            labelCurrentTime.Size = new Size(34, 15);
+            labelCurrentTime.TabIndex = 4;
+            labelCurrentTime.Text = "00:00";
+            // 
+            // labelTotalTime
+            // 
+            labelTotalTime.AutoSize = true;
+            labelTotalTime.Location = new Point(523, 38);
+            labelTotalTime.Name = "labelTotalTime";
+            labelTotalTime.Size = new Size(34, 15);
+            labelTotalTime.TabIndex = 5;
+            labelTotalTime.Text = "00:00";
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(287, 238);
-            Controls.Add(BtnOpenFile);
-            Controls.Add(BtnStop);
-            Controls.Add(BtnPlay);
+            ClientSize = new Size(569, 375);
+            Controls.Add(labelTotalTime);
+            Controls.Add(labelCurrentTime);
+            Controls.Add(progressBar1);
+            Controls.Add(ButtonOpenFile);
+            Controls.Add(ButtonPlay);
             Name = "Form1";
             Text = "Form1";
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
-        private Button BtnPlay;
-        private Button BtnStop;
+        private Button ButtonPlay;
         private OpenFileDialog openFileDialog1;
-        private Button BtnOpenFile;
+        private Button ButtonOpenFile;
+        private ProgressBar progressBar1;
+        private Label labelCurrentTime;
+        private Label labelTotalTime;
     }
 }
